@@ -14,6 +14,9 @@ const port = process.env.PORT
 app.set('view engine', 'pug')
 app.set('views', './views')
 
+//config file static
+app.use(express.static('public'))
+
 //config route
 studentRoute(app)
 
