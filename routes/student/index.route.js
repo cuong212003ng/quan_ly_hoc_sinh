@@ -6,3 +6,4 @@ module.exports = (app) => {
   app.use("/information", informationRoute);
 };
 
+ 

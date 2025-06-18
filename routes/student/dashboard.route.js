@@ -1,8 +1,9 @@
 const express = require("express");
+const { dashboard } = require("../../controllers/student/dashboard.controller");
 const route = express.Router();
 
-route.get("/", (req, res) => {
-    res.render("student/pages/dashboard/index");
-});
+const controller = require("../../controllers/student/dashboard.controller");
+
+route.get("/", controller.dashboard);
 
 module.exports = route;
