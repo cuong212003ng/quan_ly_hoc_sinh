@@ -2,10 +2,13 @@
 const express = require('express')
 const app = express()
 
+//config environment variables
+require('dotenv').config()
+
 //config route
 const studentRoute = require('./routes/student/index.route')
 
-const port = 1025
+const port = process.env.PORT
 
 // Config view engine
 app.set('view engine', 'pug')
